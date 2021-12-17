@@ -1,31 +1,48 @@
 # Cadastro-Paciente-Covid
 
-MAPA - ESOFT - PROGRAMAÇÃO DE SISTEMAS II - 54/2021
+Diante das grandes filas e aglomerações de pessoas aguardando atendimento nos postos de saúde e hospitais, você já refletiu sobre como a tecnologia poderia apoiar na agilidade e organização dos atendimentos? Nesta atividade MAPA você é desafiado a elaborar uma solução para esta demanda.
+Para isso, convido-o a realizar uma leitura atenta do contexto a seguir. Preste atenção nas informações e bom trabalho!
 
-Para a realização deste MAPA você é convidado a desenvolver um sistema de reservas diárias para um hotel. Por onde começar?
-Leia com atenção a descrição abaixo. Preste atenção nas informações, pois elas lhes orientarão na definição do projeto!
+Apesar da grande campanha de vacinação contra COVID-19, a pandemia ainda lota as filas dos hospitais. Sabe-se que, além da vacina, a prevenção através do distanciamento social, uso de álcool para higienização das mãos e uso de máscara ainda consistem no melhor método para o controle da pandemia.
 
------
+A tecnologia também tem sido uma grande aliada para que a vida de milhões de pessoas continue relativamente normal. Muitos programas de computadores realizam tarefas de forma automatizada, evitando assim a aproximação entre as pessoas como acontece, por exemplo,  em supermercados nos caixas com autoatendimento.
 
-Um hotel recém-criado em sua cidade lhe contratou para criar um sistema de reserva de diárias. O sistema deverá conter o cadastro de hóspede, contendo nome, endereço, idade.
+Ferramentas de reuniões e aulas on-line nunca foram tão utilizadas como agora na Pandemia e, graças a essas tecnologias, o isolamento físico torna-se cada vez menor além de se promover o distanciamento social.
 
-Com relação à hospedagem, o hotel conta com várias suítes e cada uma possui um número, o tipo (simples ou luxo), a capacidade de pessoas e um valor de diária.
+Diante deste contexto, imagine que você faz parte de uma equipe de Tecnologia e Desenvolvimento de um grande hospital que possui um pronto atendimento 24 horas e atende as mais diversas emergências médicas, desde doenças infecciosas como o COVID-19 a diversas outros problemas de saúde.
 
-Para o sistema de reserva, o mesmo deverá registrar a quantidade de diárias, a quantidade de pessoas, a suíte, e o hóspede responsável. A partir dessas informações, o sistema deverá informar o valor e se comporta o número de pessoas indicadas.
+A fila para o atendimento está aumentando cada vez mais, sendo um grande risco para contaminação pelo Coronavírus devido à alta demanda e aglomeração que se formam com as filas. Por este motivo, você foi encarregado de criar um programa em Java que faça uma triagem inicial através de totens eletrônicos que serão disponibilizados no pronto atendimento, agilizando assim o atendimento e fazendo a separação dos suspeitos de COVID-19 dos não suspeitos, garantindo um distanciamento e redução da infecção gerado pelas filas.
 
-Regras:
+Neste programa o paciente chegará ao totem e fará um cadastro prévio indicando os seguintes dados:
+    - CPF
+    - Nome
+    - Sexo
+    - Idade
 
-1 - A reserva não pode alocar mais hóspedes do que a capacidade da suíte.
-2 - Bebês até 2 anos não contam na capacidade da suíte.
-3 - Para o cálculo da diária, multiplique o valor da diária da suíte pela quantidade de diárias solicitadas.
-4 - Para um reserva com mais de 7 dias, deverá ser concedido um desconto de 10%
-5 - Aplique os conceitos da orientação à objetos visto na disciplina, os métodos de negócio devem estar na sua classe pertencente.
+Após o cadastro, o paciente deve responder a um questionário de sintomas no qual cada sintoma terá um peso para avaliação do risco de COVID. Os sintomas são:
 
- O programa a ser avaliado irá considerar apenas os objetos e os métodos de negócio, bem como (no mínimo) uma classe Principal executando tais métodos, podendo as entradas de dados serem fixas, servindo como simulação das operações. Não será cobrada a interface gráfica com usuário, entretanto fique à vontade caso queira criar a interação com usuário.
+- Tem Febre? (5 pontos)
+- Tem dor de cabeça? (1 ponto)
+- Tem secreção nasal ou espirros? (1 ponto)
+- Tem dor/irritação na garganta? (1 ponto)
+- Tem tosse seca? (3 pontos)
+- Tem dificuldade respiratória? (10 pontos)
+- Tem dores no corpo? (1 ponto)
+- Tem diarreia? (1 ponto)
+- Esteve em contato, nos últimos 14 dias, com um caso diagnosticado com COVID-19? (10 pontos)
+- Esteve em locais com grande aglomeração? (3 pontos)​
+
+OBS: Caso o usuário indique que SIM (S) soma-se o valor, caso seja indicado NÃO (N) não soma o valor. O encaminhamento será feito para 3 alas: Risco Baixo, Risco Médio e Risco Alto.
+- Para o risco baixo o total de pontos dos sintomas deverão ser de 0 a 9.
+- Para o risco médio de 10 a 19 pontos.
+- Para o risco alto de 20 ou mais pontos.
+ 
+Após preenchimento do questionário, é preciso indicar para qual ala o paciente deverá se dirigir.
+Após a finalização do atendimento, os dados deverão ser armazenados em uma lista de objeto e o programa deverá esperar a entrada de dados de um novo paciente.
+Para sair do programa, o operador deverá digitar SAIR, no campo CPF de um novo atendimento.
 
 Atenção:
-O projeto do Netbeans ou as Classes em Java deverão ser enviadas em ZIP.
-
+O código Java ou projeto do Netbeans deverá ser enviado para correção em ZIP.
 Antes de enviar o arquivo, certifique-se de que atendeu a todos os critérios solicitados. Após o envio não são permitidas alterações. Por favor, não insista.
-
 Não são permitidas correções parciais no decorrer do módulo, ou seja, o famoso: "professor veja se minha atividade está certa?" Isso invalida seu processo avaliativo. Lembre-se que a interpretação da atividade também faz parte da avaliação. Por favor, não insista solicitando que os professores mediadores lhe deem orientações extras acerca da atividade.
+ 
